@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Froebel School</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="scrolled">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Froebel Logo">
+                <span>FROEBEL</span>
+            </a>
+            <div class="nav-right" style="display: flex; align-items: center; gap: 60px;">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="admissions.html" class="btn btn-primary" style="padding: 12px 28px; font-size: 0.85rem; border-radius: 100px;">Admissions</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="page-banner" style="background: var(--dark); padding: 150px 0 80px; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="color: white; font-size: 3.5rem;">Our Gallery</h1>
+            <p style="opacity: 0.8; font-size: 1.2rem;">Capturing moments of joy, discovery, and growth.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-main section">
+        <div class="container">
+            <!-- Filter placeholder -->
+            <div class="text-center" style="margin-bottom: 40px;">
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <button class="btn btn-secondary">All Photos</button>
+                    <button class="btn btn-outline" style="color: var(--dark-gray); border-color: var(--gray);">Campus</button>
+                    <button class="btn btn-outline" style="color: var(--dark-gray); border-color: var(--gray);">Events</button>
+                    <button class="btn btn-outline" style="color: var(--dark-gray); border-color: var(--gray);">Activities</button>
+                </div>
+            </div>
+
+            <div class="grid grid-3 stagger-container">
+                <div class="animate-child img-zoom-container"><img src="assets/1.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/2.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/3.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/4.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/5.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/6.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/7.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/8.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/9.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/10.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/11.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+                <div class="animate-child img-zoom-container"><img src="assets/12.jpg" alt="Gallery" style="height: 250px; width: 100%; object-fit: cover;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Contact + Footer - Closure -->
+    <footer style="background: #000; color: white; padding: 100px 0 40px;">
+        <div class="container">
+            <div class="footer-grid" style="grid-template-columns: 2fr 1fr 1fr 1.5fr; display: grid; gap: 80px; margin-bottom: 80px;">
+                <div class="footer-content">
+                    <div class="logo" style="margin-bottom: 32px; color: white;">
+                        <img src="assets/images/logo.jpg" alt="Froebel Logo" style="filter: brightness(0) invert(1); height: 50px;">
+                        <span>FROEBEL</span>
+                    </div>
+                    <p style="opacity: 0.5; font-size: 0.95rem; line-height: 1.8; margin-bottom: 32px;">Dedicated to the pursuit of excellence through activity-based pedagogy and global research standards.</p>
+                </div>
+                <div class="footer-content">
+                    <h4 style="color: white; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 32px;">Explore</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 16px; list-style: none;">
+                        <li><a href="about.html" style="opacity: 0.5; transition: 0.3s; font-size: 0.9rem;">Our Story</a></li>
+                        <li><a href="academics.html" style="opacity: 0.5; transition: 0.3s; font-size: 0.9rem;">Academics</a></li>
+                        <li><a href="gallery.html" style="opacity: 0.5; transition: 0.3s; font-size: 0.9rem;">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h4 style="color: white; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 32px;">Portals</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 16px; list-style: none;">
+                        <li><a href="admissions.html" style="opacity: 0.5; transition: 0.3s; font-size: 0.9rem;">Admissions</a></li>
+                        <li><a href="contact.html" style="opacity: 0.5; transition: 0.3s; font-size: 0.9rem;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h4 style="color: white; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 32px;">Reach Us</h4>
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <a href="tel:+9194190XXXXX" style="display: flex; align-items: center; gap: 12px; color: white; opacity: 0.6; font-size: 0.9rem;"><i class="fas fa-phone-alt"></i> +91 94190 XXX XX</a>
+                        <p style="display: flex; align-items: center; gap: 12px; color: white; opacity: 0.6; font-size: 0.9rem;"><i class="fas fa-map-marker-alt"></i> Gulshan Abad, K.P Road, Anantnag, J&K</p>
+                        <a href="https://wa.me/9194190XXXXX" style="display: inline-flex; align-items: center; gap: 12px; background: #25D366; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 700; width: fit-content;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; opacity: 0.4; font-size: 0.8rem;">
+                <p>&copy; 2026 Froebel School Anantnag. All Rights Reserved.</p>
+                <p>Nurturing Potential Since 2015</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
