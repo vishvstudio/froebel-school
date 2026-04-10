@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notices | Froebel School</title>
+    
+    <!-- Branding & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="scrolled">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Froebel Logo">
+                <span>FROEBEL SCHOOL</span>
+            </a>
+            <div class="nav-right" style="display: flex; align-items: center; gap: 60px;">
+                <div class="mobile-close" style="position: absolute; top: 30px; right: 30px; font-size: 2rem; cursor: pointer;"><i class="fas fa-times"></i></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions" style="display: flex; gap: 12px; align-items: center;">
+                    <a href="notices.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.8rem; border-radius: 100px; color: inherit; border-color: currentColor;">Notices</a>
+                    <a href="admissions.html" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.8rem; border-radius: 100px;">Admissions</a>
+                </div>
+            </div>
+            <div class="menu-btn" style="display: none; font-size: 1.8rem; cursor: pointer; color: inherit;"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background: var(--dark); padding: 150px 0 80px; color: white; text-align: center;">
+        <div class="container">
+            <h1 class="animate" style="font-size: 3.5rem; margin-bottom: 16px;">Notice Board</h1>
+            <p class="animate" style="opacity: 0.8; font-size: 1.2rem;">Official announcements and institutional updates.</p>
+        </div>
+    </section>
+
+    <!-- Notices Section -->
+    <section class="section">
+        <div class="container">
+            <div class="notice-board animate">
+                <div class="notice-grid">
+                    <div class="notice-card">
+                        <div class="notice-pin"></div>
+                        <span class="notice-date">April 15, 2026</span>
+                        <h4>Admissions Open for 2026</h4>
+                        <p>Registration for new academic session is now open. Limited seats available in KG and Primary sections.</p>
+                    </div>
+                    <div class="notice-card" style="border-left-color: var(--secondary);">
+                        <div class="notice-pin" style="background: var(--primary);"></div>
+                        <span class="notice-date">April 20, 2026</span>
+                        <h4>Inter-School Sports Meet</h4>
+                        <p>Our students will be participating in the district sports competition held at Anantnag Stadium.</p>
+                    </div>
+                    <div class="notice-card" style="border-left-color: var(--accent);">
+                        <div class="notice-pin"></div>
+                        <span class="notice-date">May 01, 2026</span>
+                        <h4>Parent-Teacher Meeting</h4>
+                        <p>First term progress reports will be discussed. All parents are requested to attend at 10:00 AM.</p>
+                    </div>
+                    <div class="notice-card">
+                        <div class="notice-pin"></div>
+                        <span class="notice-date">May 15, 2026</span>
+                        <h4>Science Fair Preparation</h4>
+                        <p>Students are requested to finalize their activity-based projects for the upcoming Science Exhibition.</p>
+                    </div>
+                    <div class="notice-card" style="border-left-color: var(--secondary);">
+                        <div class="notice-pin"></div>
+                        <span class="notice-date">June 05, 2026</span>
+                        <h4>World Environment Day</h4>
+                        <p>A special plantation drive will be organized in the campus. Students are encouraged to bring a sapling.</p>
+                    </div>
+                    <div class="notice-card" style="border-left-color: var(--primary);">
+                        <div class="notice-pin"></div>
+                        <span class="notice-date">June 21, 2026</span>
+                        <h4>Summer Vacation Announcement</h4>
+                        <p>The school will remain closed for summer break from June 25th to July 10th. Holiday homework is posted on portal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section" style="background: var(--dark); color: white; padding-top: 100px;">
+        <div class="container">
+            <div class="footer-grid" style="grid-template-columns: 2fr 1fr 1fr 1.5fr; display: grid; gap: 80px; margin-bottom: 80px;">
+                <div class="footer-content">
+                    <div class="logo" style="margin-bottom: 32px; color: white;">
+                        <img src="assets/images/logo.jpg" alt="Froebel Logo" style="filter: brightness(0) invert(1); height: 50px;">
+                        <span>FROEBEL SCHOOL</span>
+                    </div>
+                    <p style="opacity: 0.5; font-size: 0.95rem; line-height: 1.8; margin-bottom: 32px;">Dedicated to nurturing young minds through a balanced approach of academic excellence and co-curricular development.</p>
+                </div>
+                <!-- Links -->
+                <div class="footer-content">
+                    <h4 style="color: white; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 32px;">Explore</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 16px; list-style: none;">
+                        <li><a href="about.html" style="color: white; opacity: 0.6; text-decoration: none;">Our Story</a></li>
+                        <li><a href="academics.html" style="color: white; opacity: 0.6; text-decoration: none;">Academic Programs</a></li>
+                        <li><a href="gallery.html" style="color: white; opacity: 0.6; text-decoration: none;">Campus Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h4 style="color: white; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 32px;">Support</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 16px; list-style: none;">
+                        <li><a href="admissions.html" style="color: white; opacity: 0.6; text-decoration: none;">Admissions</a></li>
+                        <li><a href="contact.html" style="color: white; opacity: 0.6; text-decoration: none;">Get in Touch</a></li>
+                        <li><a href="notices.html" style="color: white; opacity: 0.6; text-decoration: none;">Notice Board</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h4 style="color: white; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 32px;">Connect</h4>
+                    <p style="opacity: 0.5; margin-bottom: 24px;">Gulshan Abad, K.P Road<br>Anantnag, J&K</p>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; opacity: 0.5; font-size: 0.85rem;">
+                <p>© 2026 Froebel School. All Rights Reserved.</p>
+                <div style="display: flex; gap: 32px;">
+                    <span>Designed for Excellence</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

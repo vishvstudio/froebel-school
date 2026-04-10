@@ -77,9 +77,17 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .logo span {
+h1, h2, h3, h4 {
     font-family: var(--font-heading);
     color: var(--dark);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+}
+
+.logo span {
+    font-family: var(--font-heading);
+    color: inherit;
     line-height: 1.2;
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -117,8 +125,68 @@ img {
   padding: 0 20px;
 }
 
+/* Hero Section & Slider */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--dark);
+}
+
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out, transform 10s linear;
+  transform: scale(1.1);
+}
+
+.slide.active {
+  opacity: 0.6;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.8), transparent);
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem !important;
+  }
+  .hero-content p {
+    font-size: 1.1rem !important;
+  }
+}
+
 .section {
   padding: var(--section-padding);
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .text-center { text-align: center; }

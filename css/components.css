@@ -31,6 +31,7 @@ nav.scrolled {
   color: inherit;
   letter-spacing: -0.04em;
   text-decoration: none;
+  transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .logo img {
@@ -107,6 +108,20 @@ nav.scrolled {
   background: var(--white);
   color: var(--primary);
   border-color: var(--white);
+}
+
+.hero, .trust-bar, .footer, footer, section {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--white);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Cards - Depth & Interaction */
@@ -229,22 +244,174 @@ footer {
   transform: scale(1.1) rotate(10deg);
 }
 
-/* Responsive Navbar */
-.menu-btn {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+/* Responsive Navbar & Optimization */
+@media (max-width: 1024px) {
+  .nav-right {
+    gap: 15px !important;
+  }
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
+@media (max-width: 900px) {
+  nav {
+    padding: 15px 0 !important;
+  }
+  .nav-links, .nav-actions {
+    display: none !important;
   }
   .menu-btn {
-    display: block;
+    display: block !important;
   }
+  
+  /* Mobile Overlay (Managed via JS) */
+  .nav-right.mobile-active {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    gap: 40px !important;
+    animation: fadeIn 0.4s ease forwards;
+  }
+  
+  .nav-right.mobile-active .nav-links {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px !important;
+    opacity: 1;
+  }
+
+  .nav-right.mobile-active .nav-links a {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .nav-right.mobile-active .nav-actions {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px !important;
+  }
+
+  .nav-right.mobile-active .nav-actions a {
+    color: white !important;
+    border-color: rgba(255,255,255,0.3) !important;
+  }
+
+  /* Close Button in Mobile Menu */
+  .mobile-close {
+    display: none !important; /* Hidden by default */
+  }
+
+  .nav-right.mobile-active .mobile-close {
+    display: block !important;
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 1002;
+  }
+}
+}
+
+@media (max-width: 900px) {
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
   }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 80px 0 !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .container {
+    padding: 0 24px !important;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gallery Interactivity */
+.gallery-item {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform-origin: center;
+}
+
+/* Notice Board */
+.notice-board {
+  background: var(--surface);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.notice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.notice-card {
+  background: white;
+  padding: 30px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 5px solid var(--primary);
+  transition: var(--transition);
+  position: relative;
+}
+
+.notice-card:hover {
+  transform: translateY(-8px) rotate(1deg);
+  box-shadow: var(--shadow-lg);
+}
+
+.notice-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.notice-card h4 {
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+.notice-card p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.notice-pin {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 4px rgba(0,0,0,0.2);
 }

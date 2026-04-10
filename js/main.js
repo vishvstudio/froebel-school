@@ -13,12 +13,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mobile Menu Toggle (Simplified)
-    const menuBtn = document.createElement('div');
-    menuBtn.className = 'menu-btn';
-    menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    // Actually, I'll add this directly in HTML, but logic here:
-    // This is a placeholder for more complex logic if needed.
+    // Mobile Menu Toggle Logic
+    const menuBtn = document.querySelector('.menu-btn');
+    const mobileClose = document.querySelector('.mobile-close');
+    const navRight = document.querySelector('.nav-right');
+    
+    if (menuBtn && navRight) {
+        menuBtn.addEventListener('click', () => {
+            navRight.classList.add('mobile-active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        if (mobileClose) {
+            mobileClose.addEventListener('click', () => {
+                navRight.classList.remove('mobile-active');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Close when clicking links
+        navRight.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navRight.classList.remove('mobile-active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navRight.classList.contains('mobile-active')) {
+                navRight.classList.remove('mobile-active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 
     // Smooth Scroll for Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -61,12 +89,60 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Hero Slider Shuffle Logic
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        const slideInterval = setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000); // 5 seconds per slide
+    }
+
     // Horizontal Scroll for Events - Optional mouse-wheel support
     const eventScroll = document.querySelector('.horizontal-scroll');
     if (eventScroll) {
         eventScroll.addEventListener('wheel', (evt) => {
             evt.preventDefault();
             eventScroll.scrollLeft += evt.deltaY;
+        });
+    }
+    // Gallery Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('btn-secondary');
+                    b.classList.add('btn-outline');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('btn-secondary');
+                btn.classList.remove('btn-outline');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
         });
     }
 });

@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Froebel School Anantnag | Where Learning Meets Growth</title>
+    <title>Froebel School | Where Learning Meets Growth</title>
     <meta name="description" content="An English medium, co-educational school in Gulshan Abad, Anantnag. Focused on activity-based learning and the holistic growth of students.">
     
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- External Assets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,9 +26,10 @@
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.jpg" alt="Froebel Logo">
-                <span>FROEBEL ANANTNAG</span>
+                <span>FROEBEL SCHOOL</span>
             </a>
             <div class="nav-right" style="display: flex; align-items: center; gap: 60px;">
+                <div class="mobile-close" style="position: absolute; top: 30px; right: 30px; font-size: 2rem; cursor: pointer;"><i class="fas fa-times"></i></div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -31,29 +37,37 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <a href="admissions.html" class="btn btn-primary" style="padding: 12px 28px; font-size: 0.85rem; border-radius: 100px;">Admissions</a>
+                <div class="nav-actions" style="display: flex; gap: 12px; align-items: center;">
+                    <a href="notices.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.8rem; border-radius: 100px; color: inherit; border-color: currentColor;">Notices</a>
+                    <a href="admissions.html" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.8rem; border-radius: 100px;">Admissions</a>
+                </div>
             </div>
-            <div class="menu-btn" style="display: none; font-size: 1.5rem; cursor: pointer;"><i class="fas fa-bars"></i></div>
+            <div class="menu-btn" style="display: none; font-size: 1.8rem; cursor: pointer; color: inherit;"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
 
-    <!-- 1. Hero Section - The First Impression -->
-    <section class="hero" style="position: relative; height: 100vh; display: flex; align-items: center; overflow: hidden; color: white; background: var(--dark);">
-        <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
-            <img src="assets/1.jpg" alt="Students Learning" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6; animation: heroZoom 20s infinite alternate;">
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(15, 23, 42, 0.8) 20%, transparent 100%);"></div>
+    <!-- 1. Hero Section -->
+    <header class="hero">
+        <!-- Hero Background Slider -->
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('assets/1.jpg');"></div>
+            <div class="slide" style="background-image: url('assets/2.jpg');"></div>
+            <div class="slide" style="background-image: url('assets/3.jpg');"></div>
+            <div class="slide" style="background-image: url('assets/4.jpg');"></div>
         </div>
+        
+        <div class="hero-overlay"></div>
         <div class="container" style="position: relative; z-index: 2;">
-            <div class="hero-content" style="max-width: 700px; text-align: left;">
-                <h1 style="font-size: 5.5rem; line-height: 1.1; margin-bottom: 24px; color: white;">Where Learning<br>Meets <span class="text-gradient" style="background: linear-gradient(135deg, #FACC15, #38BDF8); -webkit-background-clip: text;">Growth</span></h1>
-                <p style="font-size: 1.4rem; margin-bottom: 48px; opacity: 0.9; line-height: 1.6; max-width: 550px;">Nurturing young minds with knowledge, values, and creativity.</p>
-                <div class="hero-btns animate" style="display: flex; gap: 24px;">
-                    <a href="admissions.html" class="btn btn-primary" style="background: var(--primary);">Apply for Admission</a>
-                    <a href="about.html" class="btn btn-outline">Explore School</a>
+            <div class="hero-content animate">
+                <h1 style="color: white; font-size: 5rem; margin-bottom: 24px;">Where Learning<br><span class="text-gradient" style="background: linear-gradient(135deg, var(--accent), #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Meets Growth</span></h1>
+                <p style="color: white; font-size: 1.5rem; margin-bottom: 48px; max-width: 600px; opacity: 0.9;">Nurturing young minds through activity-based learning and a commitment to academic excellence.</p>
+                <div class="hero-btns" style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
+                    <a href="admissions.html" class="btn btn-primary" style="background: var(--accent); color: var(--dark); padding: 18px 48px; font-weight: 800; width: fit-content; min-width: 280px; text-align: center;">Apply for Admission</a>
+                    <a href="about.html" class="btn btn-outline" style="padding: 18px 48px; border: 2px solid rgba(255,255,255,0.3); font-weight: 700; width: fit-content; min-width: 280px; text-align: center;">Explore School</a>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- 2. Trust Bar -->
     <section class="trust-bar" style="background: var(--white); border-bottom: 1px solid var(--gray-100); padding: 40px 0;">
@@ -287,7 +301,7 @@
                 <div class="footer-content">
                     <div class="logo" style="margin-bottom: 32px; color: white;">
                         <img src="assets/images/logo.jpg" alt="Froebel Logo" style="filter: brightness(0) invert(1); height: 50px;">
-                        <span>FROEBEL ANANTNAG</span>
+                        <span>FROEBEL SCHOOL</span>
                     </div>
                     <p style="opacity: 0.5; font-size: 0.95rem; line-height: 1.8; margin-bottom: 32px;">Dedicated to nurturing young minds through a balanced approach of academic excellence and co-curricular development.</p>
                     <div style="display: flex; gap: 20px;">
@@ -320,7 +334,7 @@
                 </div>
             </div>
             <div style="padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; opacity: 0.4; font-size: 0.8rem;">
-                <p>&copy; 2026 Froebel School Anantnag. All Rights Reserved.</p>
+                <p>&copy; 2026 Froebel School. All Rights Reserved.</p>
                 <p>Nurturing Potential Since 2015</p>
             </div>
         </div>
